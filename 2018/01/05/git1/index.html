@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="编程资料库,Java教程" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Cygwin是什么
+下面是来自维基百科的解释：
+Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git-cygwin">
+<meta property="og:url" content="http://www.coder163.com/2018/01/05/git1/index.html">
+<meta property="og:site_name" content="编程资料库">
+<meta property="og:description" content="Cygwin是什么
+下面是来自维基百科的解释：
+Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/1_cygwin_setup.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/2_choose_installation_type.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/3_select_root_install_directory.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/4_select_local_package_directory.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/error_no_dir_exist.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/5_select_your_internet_connection.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/6_choose_a_download_site.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/7_select_packages.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/click_to_choose_install_gdb.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/click_devel_default.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/install_all_devel.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/reinstall_all_devel.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/uninstall_devel.png">
+<meta property="og:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/common_modules_all.png">
+<meta property="og:updated_time" content="2018-01-05T08:38:29.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git-cygwin">
+<meta name="twitter:description" content="Cygwin是什么
+下面是来自维基百科的解释：
+Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows">
+<meta name="twitter:image" content="http://ozrvnx5ya.bkt.clouddn.com/cygwin/1_cygwin_setup.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '舞动的代码'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.coder163.com/2018/01/05/git1/"/>
+
+
+
+
+
+
+  <title>git-cygwin | 编程资料库</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">编程资料库</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">坚持原创技术分享</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            关于作者
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+	  <!--增加的代码 start-->
+          
+            
+            全站搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+
+    </div>
+  
+</nav>
+<!-- 顶部加载条-->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.coder163.com/2018/01/05/git1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侯叶飞">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="编程资料库">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git-cygwin</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T15:28:44+08:00">
+                2018-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Cygwin是什么"><a href="#Cygwin是什么" class="headerlink" title="Cygwin是什么"></a>Cygwin是什么</h4><ul>
+<li>下面是来自维基百科的解释：<ul>
+<li>Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows 95和Windows 98上，相对差劲一些。目前Cygwin由Red Hat等负责维护。</li>
+</ul>
+</li>
+</ul>
+<h4 id="下载：https-cygwin-com-install-html"><a href="#下载：https-cygwin-com-install-html" class="headerlink" title="下载：https://cygwin.com/install.html"></a>下载：<a href="https://cygwin.com/install.html" target="_blank" rel="external">https://cygwin.com/install.html</a></h4><ul>
+<li>官网下载是setup.exe相当于一个下载器,并不是安装包,Cygwin中模块的安装、卸载都可以通过它来实现</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h5 id="1-双击setup-exe，则会出现安装界面："><a href="#1-双击setup-exe，则会出现安装界面：" class="headerlink" title="1. 双击setup.exe，则会出现安装界面："></a>1. 双击setup.exe，则会出现安装界面：</h5><ul>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/1_cygwin_setup.png" alt=""><br>可以看到，其中对于setup.exe，即此安装包，也是有对应的版本的，此处的是2.774。</li>
+</ul>
+<h5 id="2-选择Cygwin的安装方式"><a href="#2-选择Cygwin的安装方式" class="headerlink" title="2. 选择Cygwin的安装方式"></a>2. 选择Cygwin的安装方式</h5><ol>
+<li>点击“下一步”，出现“Choose installation type”界面：<br><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/2_choose_installation_type.png" alt=""><ul>
+<li>Install from internet(downloaded files will be kept for feature reuse):<ul>
+<li>从网上下载（下载下来的文件，也可以将来再用）:其意思是，从网上下载的文件，存在本地硬盘后，以后万一遇到诸如某个模块被破坏了，不能用了，则可以再通过此setup.exe去重新安装一下，但是选择的是下面要说的第三项，即选择从本地某个文件夹安装，即此处之前下载好了的，效果相当于，windows中安装程序的修复功能</li>
+</ul>
+</li>
+<li>Download Without Installing<ul>
+<li>只下载不安装:其用意，暂时没有完全搞懂。大概是为了先完全下载下来，然后方便选择性的安装自己需要的模块吧。</li>
+</ul>
+</li>
+<li>Install from Local Directory<ul>
+<li>从本地安装：上面已经提到了，其前提是，之前已经下载过了对应的所需的各个安装模块了，此时可以选择此项，去全新安装或者修复式安装某个模块。 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="3-选择Cygwin的安装根目录"><a href="#3-选择Cygwin的安装根目录" class="headerlink" title="3. 选择Cygwin的安装根目录"></a>3. 选择Cygwin的安装根目录</h5><ul>
+<li><p>点击“下一步”后，出现“Select Root Install Directory”的界面：<br><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/3_select_root_install_directory.png" alt=""></p>
+</li>
+<li><p>其中Root Directory，指的是你所要将Cygwin安装到哪个目录。</p>
+</li>
+<li>默认为C:\cygwin，此处可以改为自己所要的路径，也可以用默认值，都可以。</li>
+<li>我此处改为我所要的路径：E:\DevTools\Cygwin\cygwin_install</li>
+<li>然后对于Install for，有两种选择：</li>
+<li>All User(RECOMMENDED)：为windows当前所有用户都有效。</li>
+<li><p>Just Me：只对当前的windows用户有效。</p>
+<p>此处选择默认的，对所有用户都有效，即可</p>
+</li>
+</ul>
+<h5 id="4-选择Cygwin的本地安装包下载路径"><a href="#4-选择Cygwin的本地安装包下载路径" class="headerlink" title="4. 选择Cygwin的本地安装包下载路径"></a>4. 选择Cygwin的本地安装包下载路径</h5><ul>
+<li>点击“下一步”后，进入“Select Local Package Directory”的界面：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/4_select_local_package_directory.png" alt=""></li>
+<li><p>其中Local Package Directory部分，是由于前面选择的是从网上下载并安装，所以此处让你选择对于下载下来的各个模块的安装文件，都放在哪里，此处，根据自己需要，设置一个路径即可</p>
+<blockquote>
+<p>设置的路径（文件夹）最好是已经创建好的，不过要注意一点的是，确保你的设置的路径，是真实存在的，否则就会出现这样的错误提示了：<br><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/error_no_dir_exist.png" alt=""></p>
+</blockquote>
+</li>
+</ul>
+<h5 id="5-选择网络连接方式"><a href="#5-选择网络连接方式" class="headerlink" title="5. 选择网络连接方式"></a>5. 选择网络连接方式</h5><ul>
+<li>然后就进入”Select Your Internet Connection“的界面了：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/5_select_your_internet_connection.png" alt=""></li>
+<li>Direct Connection <ul>
+<li>一般多数用户都是这种直接连接的网络，所以都是直接使用默认设置即可。 </li>
+</ul>
+</li>
+<li>Use Internet Explorer Proxy Settings<ul>
+<li>使用IE代理设置，如果你本身上网是通过代理上的，且IE中已经设置好了代理，那么就可以用此种设置了。</li>
+</ul>
+</li>
+<li>Use HTTP/FTP Proxy<ul>
+<li>使用HTTP或FTP类型的代理。同理，如果有需要，自己选择此项后，设置对应的代理地址和端口，即可。     </li>
+</ul>
+</li>
+</ul>
+<h5 id="6-选择（所要连接的）服务器（去用于后续下载文件）"><a href="#6-选择（所要连接的）服务器（去用于后续下载文件）" class="headerlink" title="6. 选择（所要连接的）服务器（去用于后续下载文件）"></a>6. 选择（所要连接的）服务器（去用于后续下载文件）</h5><ul>
+<li>点击”下一步“后，其会自动去下载一个服务器的列表，然后跳转到”Choose A Download Site“的界面：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/6_choose_a_download_site.png" alt=""></li>
+<li>此处需要选择一个服务器，之后就是从该服务器下载对应的安装所需的模块文件了,此处对于多数人，最好的选择就是选择163的服务器。</li>
+<li>在Use URL处，输入：<a href="http://mirrors.163.com/cygwin/" target="_blank" rel="external">http://mirrors.163.com/cygwin/</a></li>
+</ul>
+<h5 id="7-选择需要安装的模块（安装包）"><a href="#7-选择需要安装的模块（安装包）" class="headerlink" title="7. 选择需要安装的模块（安装包）"></a>7. 选择需要安装的模块（安装包）</h5><ul>
+<li>点击“下一步”后，其会解析一下，然后进入”Select Package“的界面：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/7_select_packages.png" alt=""></li>
+</ul>
+<h5 id="8-cygwin中如何取消-选择安装单个模块"><a href="#8-cygwin中如何取消-选择安装单个模块" class="headerlink" title="8. cygwin中如何取消/选择安装单个模块"></a>8. cygwin中如何取消/选择安装单个模块</h5><ul>
+<li>而想要安装某单个模块，比如gdb模块的话，那么就是对着那个skip前面的图标，点击一下，然后就可以看到gdb模块被选中了，表示安装此模块：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/click_to_choose_install_gdb.png" alt=""></li>
+</ul>
+<h5 id="9-Cygwin中如何取消-选择-重新-卸载安装某分类下的所有模块"><a href="#9-Cygwin中如何取消-选择-重新-卸载安装某分类下的所有模块" class="headerlink" title="9. Cygwin中如何取消/选择/重新/卸载安装某分类下的所有模块"></a>9. Cygwin中如何取消/选择/重新/卸载安装某分类下的所有模块</h5><ul>
+<li>很明显，如果想要对几十个，几百个模块都想要安装的话，如果都要一个个点击，那岂不是累死了。对此，cygwin早就想好了，给我们提供了更方便的设置，那就是，对于此Devel分类下面的所有的模块，如果你想要都安装，那么可以点击Devel后面的那个Default：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/click_devel_default.png" alt=""></li>
+<li>那么Default就会变成Install，同时，其下所有的模块，也都变成选择安装了：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/install_all_devel.png" alt=""></li>
+<li>对应的，再次点击Install，则会变成Reinstall，对应的Devel下面的各个模块，也都变成相应的skip了：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/reinstall_all_devel.png" alt=""></li>
+<li>此处对于reinstall之所以变成skip，那是因为之前就没有安装过，所以此处对于之前没有安装过的模块，就是变成skip，即也不安装了。而如果你是第二次运行此cygwin安装程序，那么对于那些之前安装过的，则会变成对应的reinstall的。同理，点击Reinstall，则又会变成Uninstall：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/uninstall_devel.png" alt=""></li>
+</ul>
+<h5 id="8-关于安装Cygwin模块方面的最简单，最核心的提示"><a href="#8-关于安装Cygwin模块方面的最简单，最核心的提示" class="headerlink" title="8. 关于安装Cygwin模块方面的最简单，最核心的提示"></a>8. 关于安装Cygwin模块方面的最简单，最核心的提示</h5><ul>
+<li>还是那句话，对于新手，很多不清楚各个模块的作用：那么最简单的做法是，全部都选上。当然觉得全部都选上，又太浪费下载时间和安装后的空间的话，那么最为开发用途的cygwin，则至少可以把Base，Devel，Libs，Net，System，Utils等这几个最基本的分类下面的模块都选上。即点击Base，Devel，Libs，Net，System，Utils的Default，使其都变成Install即可：</li>
+<li><img src="http://ozrvnx5ya.bkt.clouddn.com/cygwin/common_modules_all.png" alt=""></li>
+<li>当然，如果对于这些，你还嫌弃还是太多，那么就只选择Devel，也基本够你日常开发所用了。</li>
+</ul>
+<blockquote>
+<p>PS:特别提示,尽量不要尝试安装所有模块,我自己装了一次占用将近70G的空间,装完又卸了，没什么卵用</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="侯叶飞 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zhifubao.png" alt="侯叶飞 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+<div>
+      
+        
+      
+</div>
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/07/tutorial-delphi-1/" rel="next" title="DelphiXE10安装和破解">
+                <i class="fa fa-chevron-left"></i> DelphiXE10安装和破解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/11/Git_object/" rel="prev" title="Git对象">
+                Git对象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTY4NC8xMjIyMA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="侯叶飞" />
+            
+              <p class="site-author-name" itemprop="name">侯叶飞</p>
+              <p class="site-description motion-element" itemprop="description">坚持原创技术分享</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cygwin是什么"><span class="nav-number">1.</span> <span class="nav-text">Cygwin是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载：https-cygwin-com-install-html"><span class="nav-number">2.</span> <span class="nav-text">下载：https://cygwin.com/install.html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-双击setup-exe，则会出现安装界面："><span class="nav-number">3.1.</span> <span class="nav-text">1. 双击setup.exe，则会出现安装界面：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-选择Cygwin的安装方式"><span class="nav-number">3.2.</span> <span class="nav-text">2. 选择Cygwin的安装方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-选择Cygwin的安装根目录"><span class="nav-number">3.3.</span> <span class="nav-text">3. 选择Cygwin的安装根目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-选择Cygwin的本地安装包下载路径"><span class="nav-number">3.4.</span> <span class="nav-text">4. 选择Cygwin的本地安装包下载路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-选择网络连接方式"><span class="nav-number">3.5.</span> <span class="nav-text">5. 选择网络连接方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-选择（所要连接的）服务器（去用于后续下载文件）"><span class="nav-number">3.6.</span> <span class="nav-text">6. 选择（所要连接的）服务器（去用于后续下载文件）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-选择需要安装的模块（安装包）"><span class="nav-number">3.7.</span> <span class="nav-text">7. 选择需要安装的模块（安装包）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-cygwin中如何取消-选择安装单个模块"><span class="nav-number">3.8.</span> <span class="nav-text">8. cygwin中如何取消/选择安装单个模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-Cygwin中如何取消-选择-重新-卸载安装某分类下的所有模块"><span class="nav-number">3.9.</span> <span class="nav-text">9. Cygwin中如何取消/选择/重新/卸载安装某分类下的所有模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-关于安装Cygwin模块方面的最简单，最核心的提示"><span class="nav-number">3.10.</span> <span class="nav-text">8. 关于安装Cygwin模块方面的最简单，最核心的提示</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+   
+   <audio src="http://link.hhtjim.com/163/475277345.mp3"
+    controls="controls" loop="loop" preload="auto" style="width:240px">
+
+</audio>
+
+
+
+    
+</div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+&copy; 2020 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">侯叶飞 编程资料库 ( 冀ICP备16006233号 )</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+  <!-- 背景动画 -->
+  
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

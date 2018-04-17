@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="编程资料库,Java教程" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="现在，像达内、华清远见、国嵌、北大青鸟、传播智客等等IT培训机构很多，为尚未毕业的大学生、毕业了一时找不到工作的大学生、工作后想转行的再就业者提供了一个掌握新技能的机会，通过三个月或半年或更久的培训，你就可以掌握某一种技能，比如Android开发、Java Web开发、iOS开发、嵌入式Linux开发，然后，没然后了吗……
+Sorry，然后还是有的，只不过，“然后”并不是像培训机构的销售代表频频给">
+<meta property="og:type" content="article">
+<meta property="og:title" content="培训机构毕业的程序员被歧视的背后逻辑">
+<meta property="og:url" content="http://www.coder163.com/2017/12/01/zatan-1/index.html">
+<meta property="og:site_name" content="编程资料库">
+<meta property="og:description" content="现在，像达内、华清远见、国嵌、北大青鸟、传播智客等等IT培训机构很多，为尚未毕业的大学生、毕业了一时找不到工作的大学生、工作后想转行的再就业者提供了一个掌握新技能的机会，通过三个月或半年或更久的培训，你就可以掌握某一种技能，比如Android开发、Java Web开发、iOS开发、嵌入式Linux开发，然后，没然后了吗……
+Sorry，然后还是有的，只不过，“然后”并不是像培训机构的销售代表频频给">
+<meta property="og:updated_time" content="2017-12-01T05:48:48.500Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="培训机构毕业的程序员被歧视的背后逻辑">
+<meta name="twitter:description" content="现在，像达内、华清远见、国嵌、北大青鸟、传播智客等等IT培训机构很多，为尚未毕业的大学生、毕业了一时找不到工作的大学生、工作后想转行的再就业者提供了一个掌握新技能的机会，通过三个月或半年或更久的培训，你就可以掌握某一种技能，比如Android开发、Java Web开发、iOS开发、嵌入式Linux开发，然后，没然后了吗……
+Sorry，然后还是有的，只不过，“然后”并不是像培训机构的销售代表频频给">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '舞动的代码'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.coder163.com/2017/12/01/zatan-1/"/>
+
+
+
+
+
+
+  <title>培训机构毕业的程序员被歧视的背后逻辑 | 编程资料库</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">编程资料库</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">坚持原创技术分享</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            关于作者
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+	  <!--增加的代码 start-->
+          
+            
+            全站搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+
+    </div>
+  
+</nav>
+<!-- 顶部加载条-->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.coder163.com/2017/12/01/zatan-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侯叶飞">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="编程资料库">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">培训机构毕业的程序员被歧视的背后逻辑</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T11:21:29+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试经验/" itemprop="url" rel="index">
+                    <span itemprop="name">面试经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>现在，像达内、华清远见、国嵌、北大青鸟、传播智客等等IT培训机构很多，为尚未毕业的大学生、毕业了一时找不到工作的大学生、工作后想转行的再就业者提供了一个掌握新技能的机会，通过三个月或半年或更久的培训，你就可以掌握某一种技能，比如Android开发、Java Web开发、iOS开发、嵌入式Linux开发，然后，没然后了吗……</p>
+<p>Sorry，然后还是有的，只不过，“然后”并不是像培训机构的销售代表频频给你通电话时宣传的那样光明罢了。有的机构会推荐你就业直到你彻底失望他们推荐的单位，有的机构会放你出去闯荡江湖四处碰壁……形式不一，但，一段痛苦的旅程从此开始了，这倒是真的。</p>
+<p>很多单位歧视培训机构毕业的学员，你所在的单位是这样吗？或者你从IT培训机构毕业后，找工作时被鄙视了吗？</p>
+<p>为了弄明白为什么IT培训机构出来的程序员在找工作时经常遭遇不平等对待，我们需要弄明白“教育”和“培训”的差别。</p>
+<h5 id="教育和培训"><a href="#教育和培训" class="headerlink" title="教育和培训"></a>教育和培训</h5><blockquote>
+<p>大致上讲，我们所说的“教育”，指的是掌握一般性的原理与技巧的过程；而我们所说的“培训”，不过是学会某种特定技能的过程。</p>
+</blockquote>
+<p>上面是温伯格在《程序开发心理学》中说到的，符合大多数人对“教育”和“培训”的理解。</p>
+<p>你可以通过培训机构学会理发、做饭、修汽车、写代码、做蛋糕，这没什么稀奇的，当我们接受培训时，就是为了某项技能而去的，不是吗？我去蓝翔，难道不是为了开挖掘机吗？</p>
+<p>通常我们认为培训机构（学校）是学习某种不太复杂的谋生技能的摇篮。这种技能还有一个特点，就是相对稳定、变化不是特别频繁，能够在相当长一段时间内保持基本的稳定性。所以，一旦你获得了这项技能，就可以靠它吃饭吃上一阵子，一年半载，三年五年，十年八年，都有可能。</p>
+<p>而教育，我们通常认为是一项基础性的工作，重知识，重原理，周期长，见效慢，与社会脱节，有时还能把人变傻（注意我不是讽刺现行教育制度，也不是诋毁我们伟大的大学教育）。虽然如此，很多IT公司的基础部门还是被受过正规大学教育的朋友们占据了重要岗位。因为大家普遍认为，虽然学校教育严重脱离社会现实，但名牌大学的学生的智力水平、学习能力，平均来看还是高于未能考上大学的中学生，更适合于从事某种对智力、学习能力有些特别要求的技术岗位。</p>
+<p>没错，程序员正是这样的岗位。程序员的平均智力水平和学习能力高于大部分的其它行业从业者。</p>
+<p>然而，教育和培训的差别，并不是关键。关键是，出于某种原因，面试官或公司主管对出身“培训机构”的人有偏见。为了说明这一点，我们先要看看程序员需要的特殊能力。</p>
+<h5 id="程序员需要的特殊能力"><a href="#程序员需要的特殊能力" class="headerlink" title="程序员需要的特殊能力"></a>程序员需要的特殊能力</h5><p>成为一个合格的程序员，需要以下“特殊”能力：</p>
+<ul>
+<li>自知之明</li>
+<li>自我学习</li>
+<li>努力</li>
+</ul>
+<p>看起来没什么出奇之处，也许你会觉得一个程序员最重要的能力不是上面三项，没关系，知否知否，应是绿肥红瘦，随便怎么看，横看成岭侧成峰，一千个观众就有一千个哈姆雷特，嗯，开启口水模式……这里省略500字……</p>
+<p>大家公认程序员从事的是烧脑性工作，行业发展日新月异，各种新语言新技术新框架新概念层出不穷，需要程序员时刻保持归零的学习心态，持续不断地保持学习维持竞争能力和价值。所以，我也是从这个角度出发，选择了前面提到的三点，实际上这三点指向的是<strong>学习之道</strong>。</p>
+<h5 id="自知之明"><a href="#自知之明" class="headerlink" title="自知之明"></a>自知之明</h5><p>我们要了解自己拥有什么、缺乏什么，然后才能开始学习。</p>
+<p>通过不断地总结、回顾自己做过的事情，我们就可以慢慢了解自己的能力边界。哪些事情做好了，好在哪里，为什么好在那里而不是别处，是由你自身的哪种行为、才干、能力决定的？哪些事情做得不好，坏在哪里，为什么坏在那个点而不是其它的点，改善你自身的哪种行为或能力可以改变事情的走向，还是说你没什么能改变的那就是你的局限？</p>
+<p>当你了解了自己，就能发现自己应该做什么，就能决定自己的学习方向，而不是盲目地把自己交付给别人（学校、老师、家长、培训机构），因为，没有什么人真的可以为你负责，能为你负责的，只有你自己。</p>
+<p>当然，自知是最难的事，也不是一朝一夕的事，需要不断的自省和内视才可以做到。</p>
+<h5 id="自我学习"><a href="#自我学习" class="headerlink" title="自我学习"></a>自我学习</h5><p>知名的教育专家林格有两本非常著名的书，《教育是没有用的》和《学习是不需要教的》。林格有一个非常核心的观点：学习能力是人与生俱来的能力，是人之天赋，是不需要教的，但这种能力会随着年龄的增长和家庭教育、学校教育的误导而萎缩或消失，所以，教育的方向就是营造一个环境，让人自己发现自己的学习能力。</p>
+<p>六祖慧能一朝顿悟传承衣钵，佛性自在每人心中。只不过，世人多如神秀，认为“身是菩提树，心如明镜台，时时勤拂拭，勿使惹尘埃”，一定要借助外力和各种各样的清规戒律，方可保持灵台清明，最终获得某种修行。这种扭曲了教育本质的说法、做法大行其道，导致中学教育（大学相对自由）重知识、重规矩、重技能而轻发现、轻唤醒、轻因材施教、轻有教无类，最终扼杀了学生的自我学习能力。所以，很多人不是天生不会学习，而是在成长过程中在家庭、学校、社会的各种外力撕扯中慢慢丧失了自我学习能力。更甚之，多数人不自知这种能力的丧失。</p>
+<p>然而，程序员尤其需要自我学习能力。</p>
+<p>学校会教你操作系统原理，会教你计算机组成原理，会教你算法，会教你C语言，会教你Java，各种知识都会教你。然而你到工作中，能不能用你学到的知识解决问题，实在是个未知数。</p>
+<p>培训机构会教你怎么写Java代码，怎么安装某个IDE，怎么完成一个个人博客或购物车之类的小项目。然而，你是在框好的架子下被动地按照老师的要求“完成”了这些事。到了工作中，面对巨大的未知和陌生的项目，你能不能举一反三灵活运用，充满了未知。</p>
+<p><strong>一个程序员能不能自己学会一门技术、能不能自己解决一个问题特别重要。</strong>因为，很少有主管会手把手的教会你编程和设计的实际技巧，也很少有主管会大发慈悲把你送去研习班学习工作需要的技能，在一个现实的环境里，一切都要靠你自己。假如你自己不能独立习得某项必须的技术，真没有人能帮得上你。假如你自己不能独立解决问题，真没有人能始终拉扯着你。这也正合梁漱溟说的话：“任何一个人的学问成就，都是出于自学。学校教育不过给学生一个开端，使他更容易自学而已。青年于此，不可不勉。”</p>
+<p>很多人轻视培训机构，是认为培训机构的老师，多数脱产，没有丰富的一线工程实践，是业余选手，而这些“业余选手”却要通过短短的一期培训来为社会培养“专业选手”，这基本是一个笑话。即便我们能举出不少从培训机构出来的优秀选手，那也只能说明，这个选手本身具有很好的学习能力。</p>
+<p>如果一个人意识到了自己还具备自我学习能力，那他完全没必要去培训机构浪费动辄六七千一两万的学费——他完全可以自己学到必须的知识和技能，假如他真有兴趣的话。</p>
+<p>而要检验你是否还有自我学习能力，先不要去培训机构，自己找本讲编程的书、找台电脑、连上网，花一两个月时间就能搞明白你是否适合做一个程序员。一旦你通过了这种自我学习实验，那时再挑一个培训机构系统地学习某条技术栈不迟。</p>
+<p>言而总之，你能不能成为合格的或优秀的程序员，取决于自我学习能力，而不是参加过专业培训。所以，很多公司在招募程序员时，不太愿意考虑培训机构毕业的学员，因为在面试官的心里，觉得如果你有能力，自己就可以学会，完全没必要去培训机构，你接受了培训，他反倒认为你可能缺乏自我学习能力（以及对技术的兴趣），担心你不能胜任将来的工作，他太了解了，你学的那点东西根本不够用，还有很多新东西等着你学，所以，他不愿意考虑你。</p>
+<p>而对于知名大学的毕业生，虽然可能和你一样是一张白纸，但别人会以为，能进得了大学当得了学霸，起码学习能力没问题的概率高一些。</p>
+<h5 id="努力"><a href="#努力" class="headerlink" title="努力"></a>努力</h5><p>有一句话是这么说的，“以大多数人的努力程度之低，根本还轮不到拼天赋”。其实，努力也是一种天赋。为什么有的人明知努力可以改变生活，可他还是不努力呢？因为，臣妾做不到啊！为什么做不到，因为他缺乏“勤奋”、“努力”之类的天赋和才干。真的，勤奋、努力的人，多数是生就的，少数是被后妈（生活）逼的。</p>
+<p>程序员白天要上班，晚上偶尔还要加个班，自由时间少，而新技术很多，什么时候去学呢？你以为实际的项目一定可以让你锻炼新技术吗？要知道，大部分的项目在技术选型时，会考虑技术的成熟度和团队的技术储备，很少有冒险采用大家都不熟悉的技术的，不可控因素太多，风险太大，项目失败的概率很高。那这样的话，你什么时间丰富自己呢？</p>
+<p>八小时之内是现在，八小时之外是将来。你可以用的，就是你的业余时间了。你看，人家都在打游戏、看电视、挎着女伴的胳膊去速8，你还要苦哈哈的学习，如果你没有“努力”这种天赋，是很难做到的。</p>
+<p>所以，很多面试官在面对培训机构毕业的人选时，也会有诸如“如果你有自我学习能力并且努力，其实没必要上什么培训班，完全可以自己搞定”之类的想法，而你上了培训班，是不是反过来证明你不够努力咧……然后，他又会想，是不是因为你没自知之明不知道自己要干啥才被忽悠到培训机构去交学费了呢……也许，他还会想，是不是因为你对技术其实不感兴趣只是想谋个事儿干呢……</p>
+<p>额，你看，面无表情之下，其实各种想法如同暗流漩涡，澎湃不息……所以，最后，你可能就只好“回去等消息”了……</p>
+<blockquote>
+<p>不知道说了这么多，你是否明白了个中原因——面试官会觉得培训出来的学员，可能对技术没有那么浓厚的兴趣、缺乏足够强的自我学习能力也不能很好的自律和努力。但在我的观念里，其实应该这么看待IT培训机构的学员：他只是找了一个类似学校的地方系统学了一些东西，和别人并无什么不同，如果他对技术有兴趣，有自我学习能力，一样可以做一个优秀的程序员。</p>
+</blockquote>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="侯叶飞 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zhifubao.png" alt="侯叶飞 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+<div>
+      
+        
+      
+</div>
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/23/maven03/" rel="next" title="Maven高级-搭建私服(Nexus)">
+                <i class="fa fa-chevron-left"></i> Maven高级-搭建私服(Nexus)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/01/zatan-2/" rel="prev" title="程序员这样优化简历，一投制胜">
+                程序员这样优化简历，一投制胜 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTY4NC8xMjIyMA"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="侯叶飞" />
+            
+              <p class="site-author-name" itemprop="name">侯叶飞</p>
+              <p class="site-description motion-element" itemprop="description">坚持原创技术分享</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#教育和培训"><span class="nav-number">1.</span> <span class="nav-text">教育和培训</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#程序员需要的特殊能力"><span class="nav-number">2.</span> <span class="nav-text">程序员需要的特殊能力</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自知之明"><span class="nav-number">3.</span> <span class="nav-text">自知之明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自我学习"><span class="nav-number">4.</span> <span class="nav-text">自我学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#努力"><span class="nav-number">5.</span> <span class="nav-text">努力</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+   
+   <audio src="http://link.hhtjim.com/163/475277345.mp3"
+    controls="controls" loop="loop" preload="auto" style="width:240px">
+
+</audio>
+
+
+
+    
+</div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+&copy; 2020 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">侯叶飞 编程资料库 ( 冀ICP备16006233号 )</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+  <!-- 背景动画 -->
+  
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
